@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # Copyright 2009 The Go Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
@@ -45,7 +45,7 @@ case "$#" in
 	exit 2
 esac
 
-if [[ "$GOOS" = "linux" ]] && [[ "$GOARCH" != "sparc64" ]]; then
+if [ "$GOOS" = "linux" ] && [ "$GOARCH" != "sparc64" ]; then
 	# Use then new build system
 	# Files generated through docker (use $cmd so you can Ctl-C the build or run)
 	$cmd docker build --tag generate:$GOOS $GOOS

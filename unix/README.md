@@ -32,7 +32,7 @@ To build the files for your current OS and architecture, make sure GOOS and
 GOARCH are set correctly and run `mkall.sh`. This will generate the files for
 your specific system. Running `mkall.sh -n` shows the commands that will be run.
 
-Requirements: bash, perl, go
+Requirements: perl, go
 
 ### New Build System (currently for `GOOS == "Linux" && GOARCH != "sparc64"`)
 
@@ -52,7 +52,7 @@ system and have your GOOS and GOARCH set accordingly. Running `mkall.sh` will
 then generate all of the files for all of the GOOS/GOARCH pairs in the new build
 system. Running `mkall.sh -n` shows the commands that will be run.
 
-Requirements: bash, perl, go, docker
+Requirements: perl, go, docker
 
 ## Component files
 

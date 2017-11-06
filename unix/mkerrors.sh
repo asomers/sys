@@ -323,8 +323,8 @@ ccflags="$@"
 	echo package unix
 	echo
 	echo '/*'
-	indirect="includes_$(uname)"
-	echo "${!indirect} $includes"
+	eval "os_includes=\$includes_$(uname)"
+	echo "${os_includes} $includes"
 	echo '*/'
 	echo 'import "C"'
 	echo 'import "syscall"'
@@ -333,7 +333,7 @@ ccflags="$@"
 
 	# The gcc command line prints all the #defines
 	# it encounters while processing the input
-	echo "${!indirect} $includes" | $CC -x c - -E -dM $ccflags |
+	echo "${os_includes} $includes" | $CC -x c - -E -dM $ccflags |
 	awk '
 		$1 != "#define" || $2 ~ /\(/ || $3 == "" {next}
 
