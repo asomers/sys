@@ -377,6 +377,7 @@ const (
 	DLT_CHAOS                      = 0x5
 	DLT_CHDLC                      = 0x68
 	DLT_CISCO_IOS                  = 0x76
+	DLT_CLASS_NETBSD_RAWAF         = 0x2240000
 	DLT_C_HDLC                     = 0x68
 	DLT_C_HDLC_WITH_DIR            = 0xcd
 	DLT_DBUS                       = 0xe7
@@ -404,7 +405,6 @@ const (
 	DLT_GPRS_LLC                   = 0xa9
 	DLT_GSMTAP_ABIS                = 0xda
 	DLT_GSMTAP_UM                  = 0xd9
-	DLT_HHDLC                      = 0x79
 	DLT_IBM_SN                     = 0x92
 	DLT_IBM_SP                     = 0x91
 	DLT_IEEE802                    = 0x6
@@ -427,6 +427,7 @@ const (
 	DLT_IPV4                       = 0xe4
 	DLT_IPV6                       = 0xe5
 	DLT_IP_OVER_FC                 = 0x7a
+	DLT_ISO_14443                  = 0x108
 	DLT_JUNIPER_ATM1               = 0x89
 	DLT_JUNIPER_ATM2               = 0x87
 	DLT_JUNIPER_ATM_CEMIC          = 0xee
@@ -460,7 +461,7 @@ const (
 	DLT_LINUX_SLL                  = 0x71
 	DLT_LOOP                       = 0x6c
 	DLT_LTALK                      = 0x72
-	DLT_MATCHING_MAX               = 0x104
+	DLT_MATCHING_MAX               = 0x109
 	DLT_MATCHING_MIN               = 0x68
 	DLT_MFR                        = 0xb6
 	DLT_MOST                       = 0xd3
@@ -483,7 +484,7 @@ const (
 	DLT_PKTAP                      = 0x102
 	DLT_PPI                        = 0xc0
 	DLT_PPP                        = 0x9
-	DLT_PPP_BSDOS                  = 0x10
+	DLT_PPP_BSDOS                  = 0xe
 	DLT_PPP_ETHER                  = 0x33
 	DLT_PPP_PPPD                   = 0xa6
 	DLT_PPP_SERIAL                 = 0x32
@@ -494,19 +495,22 @@ const (
 	DLT_PRONET                     = 0x4
 	DLT_RAIF1                      = 0xc6
 	DLT_RAW                        = 0xc
+	DLT_RDS                        = 0x109
+	DLT_REDBACK_SMARTEDGE          = 0x20
 	DLT_RIO                        = 0x7c
 	DLT_RTAC_SERIAL                = 0xfa
 	DLT_SCCP                       = 0x8e
 	DLT_SCTP                       = 0xf8
 	DLT_SITA                       = 0xc4
 	DLT_SLIP                       = 0x8
-	DLT_SLIP_BSDOS                 = 0xf
+	DLT_SLIP_BSDOS                 = 0xd
 	DLT_STANAG_5066_D_PDU          = 0xed
 	DLT_SUNATM                     = 0x7b
 	DLT_SYMANTEC_FIREWALL          = 0x63
 	DLT_TZSP                       = 0x80
 	DLT_USB                        = 0xba
 	DLT_USBPCAP                    = 0xf9
+	DLT_USB_FREEBSD                = 0xba
 	DLT_USB_LINUX                  = 0xbd
 	DLT_USB_LINUX_MMAPPED          = 0xdc
 	DLT_USER0                      = 0x93
@@ -525,10 +529,13 @@ const (
 	DLT_USER7                      = 0x9a
 	DLT_USER8                      = 0x9b
 	DLT_USER9                      = 0x9c
+	DLT_WATTSTOPPER_DLM            = 0x107
 	DLT_WIHART                     = 0xdf
 	DLT_WIRESHARK_UPPER_PDU        = 0xfc
 	DLT_X2E_SERIAL                 = 0xd5
 	DLT_X2E_XORAYA                 = 0xd6
+	DLT_ZWAVE_R1_R2                = 0x105
+	DLT_ZWAVE_R3                   = 0x106
 	DT_BLK                         = 0x6
 	DT_CHR                         = 0x2
 	DT_DIR                         = 0x4
@@ -961,7 +968,7 @@ const (
 	MADV_WILLNEED                  = 0x3
 	MAP_32BIT                      = 0x80000
 	MAP_ALIGNED_SUPER              = 0x1000000
-	MAP_ALIGNMENT_MASK             = -0x1000000
+	MAP_ALIGNMENT_MASK             = 0xffffffffff000000
 	MAP_ALIGNMENT_SHIFT            = 0x18
 	MAP_ANON                       = 0x1000
 	MAP_ANONYMOUS                  = 0x1000
@@ -969,6 +976,7 @@ const (
 	MAP_EXCL                       = 0x4000
 	MAP_FILE                       = 0x0
 	MAP_FIXED                      = 0x10
+	MAP_GUARD                      = 0x2000
 	MAP_HASSEMAPHORE               = 0x200
 	MAP_NOCORE                     = 0x20000
 	MAP_NOSYNC                     = 0x800
@@ -1239,6 +1247,7 @@ const (
 	SIOCGETSGCNT                   = 0xc0207210
 	SIOCGETVIFCNT                  = 0xc028720f
 	SIOCGHIWAT                     = 0x40047301
+	SIOCGHWADDR                    = 0xc020693e
 	SIOCGI2C                       = 0xc020693d
 	SIOCGIFADDR                    = 0xc0206921
 	SIOCGIFBRDADDR                 = 0xc0206923
