@@ -272,9 +272,12 @@ const (
 )
 
 const (
-	PTRACE_TRACEME = 0x0
-	PTRACE_CONT    = 0x7
-	PTRACE_KILL    = 0x8
+	PTRACE_TRACEME    = 0x0
+	PTRACE_CONT       = 0x7
+	PTRACE_GETREGS    = 0x21
+	PTRACE_KILL       = 0x8
+	PTRACE_SETREGS    = 0x22
+	PTRACE_SINGLESTEP = 0x9
 )
 
 type Reg struct {

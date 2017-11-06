@@ -11,9 +11,9 @@ import (
 	"unsafe"
 )
 
-func (r *Reg) PC() uint64 { return r.Rip }
+func (r *Reg) PC() int64 { return r.Rip }
 
-func (r *Reg) SetPC(pc uint64) { r.Rip = pc }
+func (r *Reg) SetPC(pc int64) { r.Rip = pc }
 
 func setTimespec(sec, nsec int64) Timespec {
 	return Timespec{Sec: sec, Nsec: nsec}
